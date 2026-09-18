@@ -1,0 +1,9 @@
+{
+  "name": "youth-perspectives-gender-equality",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive research website: Youth Perspectives on Gender Equality (Morocco).",
+  "scripts": {
+    "dev": "npx --yes serve -l 3000 ."
+  }
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youth Perspectives on Gender Equality — A Survey of Moroccan Youth</title>
+  <meta name="description" content="An exploratory survey of Moroccan youth on gender equality, harassment, social and beauty pressures, safety, family expectations and consent education. Interactive, transparent, respondent-driven." />
+  <meta name="theme-color" content="#0a0710" />
+  <meta property="og:title" content="Youth Perspectives on Gender Equality" />
+  <meta property="og:description" content="An exploratory survey of Moroccan youth — interactive research findings." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__brand" aria-label="Home">
+        <span class="nav__brand-mark" aria-hidden="true"></span>
+        <span class="nav__brand-text">Youth Perspectives</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">Study</a>
+        <a href="#participants">Participants</a>
+        <a href="#equality">Equality</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#safety">Safety</a>
+        <a href="#consent">Consent</a>
+        <a href="#explore">Explore</a>
+        <a href="#voices">Voices</a>
+        <a href="#findings">Findings</a>
+        <a href="#methodology">Methods</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="eyebrow reveal">An exploratory survey · Morocco</p>
+        <h1 class="hero__title reveal">Youth Perspectives on<br /><em>Gender Equality</em></h1>
+        <p class="hero__lede reveal">
+          What do young people in Morocco actually experience around equality, harassment,
+          social and beauty pressures, safety, and family life? This is what
+          <strong id="heroN">—</strong> respondents told us, in their own words and their own languages.
+        </p>
+        <div class="hero__stats reveal" id="heroStats"></div>
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="#findings">Explore the Findings</a>
+          <a class="btn btn--ghost" href="#explore">Explore the Data</a>
+        </div>
+        <p class="hero__note reveal">Findings describe survey respondents only — not all Moroccan youth. See <a href="#methodology">methodology &amp; limitations</a>.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-h">
+      <div class="section__head reveal">
+        <span class="section__num">01</span>
+        <h2 id="about-h">About the study</h2>
+      </div>
+      <div class="prose two-col reveal">
+        <div>
+          <p>This project explores how young people in Morocco perceive and experience
+          <strong>gender equality</strong>. It asks about harassment and discrimination, social and
+          beauty pressures, family expectations and differential treatment, safety and mobility,
+          gender roles, and access to education about relationships, consent and body autonomy.</p>
+          <p>The survey was <strong>anonymous</strong> and distributed through social media. Respondents
+          could answer in <strong>English, French or Arabic</strong>, and the three language versions were
+          merged into a single analysis-ready dataset for this website.</p>
+        </div>
+        <div>
+          <p>Because respondents were reached through social media and chose to take part, the
+          sample is <strong>self-selected</strong> and skews toward certain regions and school types.
+          The results are best read as a rich, exploratory snapshot — a starting point for
+          conversation, not a representative measurement of a whole generation.</p>
+          <p class="prose__aside">The research question, survey design and data collection are the author's own.
+          The data analysis and this website were built with AI assistance, working only from the real responses.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTICIPANTS -->
+    <section class="section section--alt" id="participants" aria-labelledby="part-h">
+      <div class="section__head reveal">
+        <span class="section__num">02</span>
+        <h2 id="part-h">Who participated?</h2>
+        <p class="section__sub">The shape of the sample. Read the rest of the site with these proportions in mind.</p>
+      </div>
+      <div class="grid grid--demographics">
+        <figure class="card reveal">
+          <figcaption>Gender</figcaption>
+          <div class="chart chart--sm"><canvas id="cGender" role="img" aria-label="Distribution of respondents by gender"></canvas></div>
+        </figure>
+        <figure class="card reveal">
+          <figcaption>Age group</figcaption>
+          <div class="chart chart--sm"><canvas id="cAge" role="img" aria-label="Distribution of respondents by age group"></canvas></div>
+        </figure>
+        <figure class="card reveal">
+          <figcaption>Location type</figcaption>
+          <div class="chart chart--sm"><canvas id="cLocation" role="img" aria-label="Distribution of respondents by location type"></canvas></div>
+        </figure>
+        <figure class="card reveal">
+          <figcaption>Education / occupation</figcaption>
+          <div class="chart chart--sm"><canvas id="cEducation" role="img" aria-label="Distribution of respondents by education or occupation"></canvas></div>
+        </figure>
+        <figure class="card card--wide reveal">
+          <figcaption>Region</figcaption>
+          <div class="chart chart--wide"><canvas id="cRegion" role="img" aria-label="Distribution of respondents by region"></canvas></div>
+          <p class="card__note">Several regions have very few respondents. Small regions are shown for transparency but are not compared directly.</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- EQUALITY -->
+    <section class="section" id="equality" aria-labelledby="eq-h">
+      <div class="section__head reveal">
+        <span class="section__num">03</span>
+        <h2 id="eq-h">Gender &amp; equality</h2>
+        <p class="section__sub">Respondents rated equality in Morocco from 1 (very low) to 10 (complete). It sits low — and how low depends on who is answering.</p>
+      </div>
+      <div class="grid grid--2">
+        <figure class="card reveal">
+          <figcaption>How respondents rate gender equality (1–10)</figcaption>
+          <div class="chart"><canvas id="cEqDist" role="img" aria-label="Distribution of gender equality ratings from 1 to 10"></canvas></div>
+          <p class="card__note" id="eqSummary"></p>
+        </figure>
+        <figure class="card reveal">
+          <figcaption>Average rating by group</figcaption>
+          <div class="chart"><canvas id="cEqByGroup" role="img" aria-label="Average equality rating by gender, age and education"></canvas></div>
+          <p class="card__note">Bars show the mean rating; the number on each bar is the group size (n).</p>
+        </figure>
+      </div>
+      <figure class="card reveal">
+        <figcaption>Average equality rating, by lived experience</figcaption>
+        <div class="chart chart--wide"><canvas id="cEqBySplit" role="img" aria-label="Average equality rating split by reported experiences"></canvas></div>
+        <p class="card__note">Respondents who reported harassment, body judgment, knowing a woman who experienced violence, or discomfort walking alone tended to rate equality lower. These are associations, not causes.</p>
+      </figure>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section class="section section--alt" id="experiences" aria-labelledby="exp-h">
+      <div class="section__head reveal">
+        <span class="section__num">04</span>
+        <h2 id="exp-h">Experiences &amp; social pressures</h2>
+        <p class="section__sub">Harassment, beauty pressure, body judgment and differential treatment at home — and how sharply they differ by gender.</p>
+      </div>
+      <div class="grid grid--2">
+        <figure class="card reveal">
+          <figcaption>Experienced harassment because of their gender</figcaption>
+          <div class="chart"><canvas id="cHarassGender" role="img" aria-label="Share reporting harassment, by gender"></canvas></div>
+        </figure>
+        <figure class="card reveal">
+          <figcaption>Feel &ldquo;a lot&rdquo; of pressure about beauty standards</figcaption>
+          <div class="chart"><canvas id="cBeautyGender" role="img" aria-label="Share feeling a lot of beauty pressure, by gender"></canvas></div>
+        </figure>
+        <figure class="card reveal">
+          <figcaption>Have been judged for their body</figcaption>
+          <div class="chart"><canvas id="cBodyGender" role="img" aria-label="Share judged for their body, by gender"></canvas></div>
+        </figure>
+        <figure class="card reveal">
+          <figcaption>Treated differently from an opposite-gender sibling</figcaption>
+          <div class="chart"><canvas id="cFamilyGender" role="img" aria-label="Share treated differently from a sibling, by gender"></canvas></div>
+          <p class="card__note">Among respondents who have an opposite-gender sibling.</p>
+        </figure>
+      </div>
+      <div class="pullquotes reveal" id="bodyVoices" aria-label="Selected responses about body image"></div>
+      <p class="content-note reveal">Some responses in this section describe body-shaming and disordered eating. Excerpts are anonymized and lightly trimmed.</p>
+    </section>
+
+    <!-- SAFETY -->
+    <section class="section" id="safety" aria-labelledby="safe-h">
+      <div class="section__head reveal">
+        <span class="section__num">05</span>
+        <h2 id="safe-h">Safety &amp; mobility</h2>
+        <p class="section__sub">Who feels free to move through their own neighbourhood — and how harassment and curfews track with it.</p>
+      </div>
+      <div class="grid grid--2">
+        <figure class="card reveal">
+          <figcaption>Comfortable walking alone in their neighbourhood</figcaption>
+          <div class="chart"><canvas id="cWalkGender" role="img" aria-label="Comfort walking alone, by gender"></canvas></div>
+          <p class="card__note">&ldquo;Comfortable&rdquo; = answered Always or Most of the time.</p>
+        </figure>
+        <figure class="card reveal">
+          <figcaption>Rarely or never comfortable walking alone</figcaption>
+          <div class="chart"><canvas id="cWalkHarass" role="img" aria-label="Discomfort walking alone, by whether they reported harassment"></canvas></div>
+          <p class="card__note">Split by whether the respondent reported experiencing harassment.</p>
+        </figure>
+        <figure class="card reveal">
+          <figcaption>Curfew when going out</figcaption>
+          <div class="chart"><canvas id="cCurfew" role="img" aria-label="Curfew time distribution"></canvas></div>
+        </figure>
+        <figure class="card reveal">
+          <figcaption>Personally know a woman who experienced violence</figcaption>
+          <div class="chart"><canvas id="cViolenceGender" role="img" aria-label="Share who know a woman who experienced violence, by gender"></canvas></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONSENT -->
+    <section class="section section--alt" id="consent" aria-labelledby="con-h">
+      <div class="section__head reveal">
+        <span class="section__num">06</span>
+        <h2 id="con-h">Consent &amp; body autonomy</h2>
+        <p class="section__sub">Whether young people say they have received proper education about relationships, consent and body autonomy — and how unevenly it is distributed.</p>
+      </div>
+      <div class="grid grid--2">
+        <figure class="card reveal">
+          <figcaption>Received proper education about consent &amp; body autonomy</figcaption>
+          <div class="chart"><canvas id="cConsentOverall" role="img" aria-label="Overall consent education responses"></canvas></div>
+        </figure>
+        <figure class="card reveal">
+          <figcaption>Said &ldquo;Yes&rdquo;, by school / occupation</figcaption>
+          <div class="chart"><canvas id="cConsentEdu" role="img" aria-label="Share saying yes to consent education, by education"></canvas></div>
+          <p class="card__note">Smaller groups (International, Public, Working) shown with their sample sizes.</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- EXPLORE -->
+    <section class="section" id="explore" aria-labelledby="exp2-h">
+      <div class="section__head reveal">
+        <span class="section__num">07</span>
+        <h2 id="exp2-h">Explore the data</h2>
+        <p class="section__sub">Choose a question, break it down by a demographic, and narrow the sample with the filters. The chart and the sample size update live.</p>
+      </div>
+      <div class="explorer reveal">
+        <div class="explorer__controls">
+          <div class="control">
+            <label for="exMeasure">Question</label>
+            <select id="exMeasure"></select>
+          </div>
+          <div class="control">
+            <label for="exGroup">Break down by</label>
+            <select id="exGroup"></select>
+          </div>
+          <div class="control control--filters">
+            <label>Filter the sample</label>
+            <div class="filters" id="exFilters"></div>
+          </div>
+          <button class="btn btn--ghost btn--sm" id="exReset" type="button">Reset filters</button>
+        </div>
+        <div class="explorer__view">
+          <div class="explorer__meta">
+            <span class="pill" id="exN">n = —</span>
+            <span class="explorer__caption" id="exCaption"></span>
+          </div>
+          <div class="chart chart--tall"><canvas id="cExplore" role="img" aria-label="Interactive chart of survey responses"></canvas></div>
+          <p class="explorer__warn" id="exWarn" hidden>Small sample — interpret this comparison with caution.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOICES -->
+    <section class="section section--alt" id="voices" aria-labelledby="voi-h">
+      <div class="section__head reveal">
+        <span class="section__num">08</span>
+        <h2 id="voi-h">Voices</h2>
+        <p class="section__sub">An optional open question asked about a moment respondents felt treated differently because of their gender. These themes emerged from their answers.</p>
+      </div>
+      <div class="themes reveal" id="themeBars"></div>
+      <div class="voices" id="voicesList"></div>
+      <p class="content-note reveal">Excerpts are anonymized and, where needed, translated from French or Arabic. No names, usernames or contact details appear anywhere in this project.</p>
+    </section>
+
+    <!-- FINDINGS -->
+    <section class="section" id="findings" aria-labelledby="find-h">
+      <div class="section__head reveal">
+        <span class="section__num">09</span>
+        <h2 id="find-h">Key findings</h2>
+        <p class="section__sub">Seven patterns that stood out — described as they appear in the data, among respondents, without claiming cause.</p>
+      </div>
+      <ol class="findings" id="findingsList"></ol>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section class="section section--alt" id="methodology" aria-labelledby="meth-h">
+      <div class="section__head reveal">
+        <span class="section__num">10</span>
+        <h2 id="meth-h">Methodology &amp; limitations</h2>
+      </div>
+      <div class="prose two-col reveal">
+        <div>
+          <h3>How the data was handled</h3>
+          <p>Three exports — English, French and Arabic — were parsed and merged into one dataset.
+          Equivalent questions and answer options were matched across languages and standardized to
+          common English labels (for example, <em>Femme</em>, <em>أنثى</em> and <em>Female</em> all map to
+          &ldquo;Female&rdquo;). The 1–10 equality rating was kept numeric.</p>
+          <p>&ldquo;Prefer not to say&rdquo;, &ldquo;Not applicable&rdquo; and blank answers are kept separate and
+          excluded from the relevant percentages rather than being counted as No. Charts state the
+          sample size (n) they are based on.</p>
+          <h3>Data-quality notes</h3>
+          <ul>
+            <li>No exact duplicate response patterns were detected.</li>
+            <li>No contact information, names or usernames were present in the analyzed exports; nothing of that kind is stored or shown.</li>
+            <li>The optional &ldquo;women earning more than men&rdquo; gender-roles question was not present in the response exports, so it is not charted. Gender-role attitudes are explored through family treatment and the open-ended themes instead.</li>
+            <li>Age bands follow the actual survey responses (14–17, 18–20, 20–25).</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What these numbers can and can't say</h3>
+          <ul>
+            <li><strong>Exploratory, not representative.</strong> Respondents were recruited through social media and chose to take part. They are not a random or representative sample of Moroccan youth.</li>
+            <li><strong>Skewed sample.</strong> The sample leans female, aged 14–17, in private schools, and concentrated in a few regions. Read every figure as &ldquo;among these respondents&rdquo;.</li>
+            <li><strong>Small subgroups.</strong> Several regions and categories have very few respondents. The interactive explorer flags small samples and avoids strong claims about tiny groups.</li>
+            <li><strong>Association, not causation.</strong> Where two things move together, that is a link — not proof that one causes the other.</li>
+            <li><strong>Self-report.</strong> Answers reflect what people were willing to share in an anonymous survey.</li>
+          </ul>
+          <p class="prose__aside">In short: this is a careful, transparent look at what a group of young Moroccans said — an invitation to look closer, not a final word.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__title">Youth Perspectives on Gender Equality</p>
+      <p class="footer__meta">An independent, exploratory survey of Moroccan youth · <span id="footN">—</span> respondents · English, French &amp; Arabic.</p>
+      <p class="footer__fine">Anonymous data. Findings describe respondents only. Built as a research project.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
